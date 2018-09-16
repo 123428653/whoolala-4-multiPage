@@ -12,10 +12,5 @@ module.exports = {
       page: 'detail',
       title: '详情页'
     }
-  ],
-  cssPublicPath: '../',
-  imgOutputPath: 'img/',
-  fontOutputPath: 'font',
-  cssOutputPath: './css/styles.css',
-  devServerOutputPath: '../dist',
+  ]
 };
