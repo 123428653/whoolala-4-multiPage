@@ -75,7 +75,7 @@
                 <p class="wow fadeInLeftSm">Welcome to an efficient solution for advertisers and brands to work with influencers and consumers that enables globally trustful cooperation. Decentralized. Empowered by the Ethereum blockchain.</p>
                 <div class="btns wow fadeInUp">
                   <a href="#" class="btn btn-lg btn-black" data-toggle="modal" data-target=".getWhitelisted">Watch Video</a>
-                  <b-button size="lg" variant="outline-secondary">Get Whitelisted <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></b-button>
+                  <b-button v-b-modal.getWhitelisted size="lg" variant="outline-secondary">Get Whitelisted <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></b-button>
                   <!-- <a href="#" class="btn btn-default btn-lg" data-toggle="modal" data-target=".getWhitelisted-2">Get Whitelisted <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></a> -->
                 </div>
               </b-col>
@@ -779,6 +779,205 @@
         </div>
       </div>
     </div>
+    
+    <!-- modal层 -->
+    <b-modal id="getWhitelisted" size="lg" :hide-header="true" :hide-footer="true" centered>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="getWhitelisted-head">
+            <h3>Get Whitelisted</h3>
+            <p>1. Verify email address</p>
+          </div>
+          <div class="addressForm">
+            <ul>
+              <li>
+                <label>Email</label>
+                <div>
+                  <input type="text" id="email" name="email" placeholder="john@whoolala.com,etc.(require)">
+                  <div class="error" data-err="邮箱格式不正确。" data-existing="邮箱已被注册。" data-require="邮箱不能为空。"></div>
+                </div>
+              </li>
+              <li>
+                <label>Password</label>
+                <div>
+                  <input type="password" name="password" placeholder="Enter the password (require)">
+                  <a href="javascript:;" class="viewPw"><i class="fa fa-eye-slash" data-show="fa fa-eye-slash" data-hidden="fa fa-eye" aria-hidden="true"></i></a>
+                  <div class="error" data-err="只能输入6-20个字母、数字、下划线。" data-require="密码不能为空。"></div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;" class="btn btn-lg btn-black submitBtn submitBtn-1">Continue <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </b-modal>
+    <b-modal id="getWhitelisted-2" size="lg" :hide-header="true" :hide-footer="true" centered>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="getWhitelisted-head">
+            <h3>Get Whitelisted</h3>
+            <p>2. Personal Details</p>
+          </div>
+          <div class="addressForm">
+            <ul>
+              <li>
+                <label>Full Name</label>
+                <div>
+                  <input type="text" name="fullName" placeholder="Enter the Full Name.">
+                  <div class="error" data-require="Enter the Full Name."></div>
+                </div>
+              </li>
+              <li>
+                <label>Gender</label>
+                <div>
+                  <div class="customSelect">
+                    <select name="gender">
+                      <option value="">Please select a gender</option>
+                      <option value="Female">Female</option>
+                      <option value="Male">Male</option>
+                    </select>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="placeholder">Please select a gender</div>
+                    <div class="selected-text"></div>
+                    <ul class="select-list">
+                      <li>Female</li>
+                      <li>Male</li>
+                    </ul>
+                  </div>
+                  <div class="error" data-require="Please select a gender."></div>
+                </div>
+              </li>
+              <li>
+                <label>Date of Birth</label>
+                <div>
+                  <input type="date" name="birth" placeholder="yyyy/mm/dd">
+                  <div class="error" data-require="Please enter the birthday."></div>
+                </div>
+              </li>
+              <li>
+                <label>Country of Residence</label>
+                <div>
+                  <div class="customSelect regions">
+                    <select name="">
+                      <option value="">United Kingdom</option>
+                      <option value="China">China</option>
+                      <option value="Hong Kong">Hong Kong</option>
+                      <option value="Vietnam">Vietnam</option>
+                      <option value="Cambodia">Cambodia</option>
+                    </select>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="placeholder">United Kingdom</div>
+                    <div class="selected-text"></div>
+                    <ul class="select-list">
+                      <li>China</li>
+                      <li>Hong Kong</li>
+                      <li>Vietnam</li>
+                      <li>Cambodia</li>
+                    </ul>
+                  </div>
+                  <div class="error" data-require="Please select a country to live."></div>
+                </div>
+              </li>
+              <li>
+                <label>Nationality</label>
+                <div>
+                  <div class="customSelect regions">
+                    <select name="">
+                      <option value="">United Kingdom</option>
+                      <option value="China">China</option>
+                      <option value="Hong Kong">Hong Kong</option>
+                      <option value="Vietnam">Vietnam</option>
+                      <option value="Cambodia">Cambodia</option>
+                    </select>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="placeholder">United Kingdom</div>
+                    <div class="selected-text"></div>
+                    <ul class="select-list">
+                      <li>China</li>
+                      <li>Hong Kong</li>
+                      <li>Vietnam</li>
+                      <li>Cambodia</li>
+                    </ul>
+                  </div>
+                  <div class="error" data-require="Please select a nationality."></div>
+                </div>
+              </li>
+              <li>
+                <label>Ether Wallet Address</label>
+                <div>
+                  <input type="text" name="" placeholder="Ether Wallet Address">
+                  <div class="error" data-require="Ether Wallet Address."></div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:;" class="btn btn-lg btn-black submitBtn submitBtn-2">Continue <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </b-modal>
+    <b-modal id="getWhitelisted-3" size="lg" :hide-header="true" :hide-footer="true" centered>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="getWhitelisted-head">
+            <h3>Get Whitelisted</h3>
+            <p>3. ID Verification</p>
+            <p>In order to verify your identity, we need:</p>
+          </div>
+          <div class="upload-img">
+            <ul>
+              <li class="upload-img-item">
+                <div class="upload-wrap">
+                  <div class="upload-face"><img src="http://g.h.img.whoolala.com/x/6gc8cdexev52018-05-15-16-38-50_1000x1000.jpeg"></div>
+                  <a href="javascript:;" class="uploadBtn"><i class="fa fa-upload" aria-hidden="true"></i> Upload picture</a>
+                </div>
+                <p>A selfie photo showing your unobscured face holding your current passport or valid ID card.</p>
+              </li><li class="upload-img-item">
+                <div class="upload-wrap">
+                  <div class="upload-face"><img src="http://g.h.img.whoolala.com/x/6gc8cdexev52018-05-15-16-38-50_1000x1000.jpeg"></div>
+                  <a href="javascript:;" class="uploadBtn"><i class="fa fa-upload" aria-hidden="true"></i> Upload picture</a>
+                </div>
+                <p>A clos face holding your current passport or valid ID card.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="addressForm">
+            <ul>
+              <li>
+                <a href="javascript:;" class="btn btn-lg btn-black submitBtn submitBtn-3">Continue <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </b-modal>
+    <b-modal id="getWhitelisted-4" size="lg" :hide-header="true" :hide-footer="true" centered>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="getWhitelisted-head">
+            <h3>Get Whitelisted</h3>
+            <p>4. Complete</p>
+          </div>
+          <div class="successBox">
+            <img src="http://g.h.img.whoolala.com/original/a01fembh8rn20180906170211_50x52.png" alt="success">
+            <p class="suc-msg">Your application has been submitted successfully.</p>
+            <p>We’ll let you know via email as soon as your application is approved.</p>
+          </div>
+          <div class="addressForm">
+            <ul>
+              <li>
+                <a href="javascript:;" class="btn btn-lg btn-black submitBtn submitBtn-4">Continue <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size:16px;"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </b-modal>
   </div>
 </template>
 <script type="text/javascript">
@@ -902,6 +1101,15 @@
     background-color: white;
     box-shadow: 0 0 10px 2px rgba(193, 193, 193, 0.5);
     .navbar-brand{padding:9px 10px 9px 0;}
+  }
+  .btns button{
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    @media screen and (min-width: 768px) {
+      width: auto;
+      display: inline-block;
+    }
   }
   .page3-img {
     position: relative;

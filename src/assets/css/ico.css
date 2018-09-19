@@ -60,7 +60,7 @@ input[type="date"]::-webkit-inner-spin-button{
 
 /*.btns{text-align:center;}*/
 
-.btns a {
+.btns a{
   display: block;
   margin: 10px auto;
   max-width: 70%;
@@ -945,7 +945,7 @@ h3{
   /*visibility: hidden;*/
 }
 /*Bootstrap Start*/
-.modal-dialog{
+/*.modal-dialog{
   top: 50%;
   margin:0 auto;
 }
@@ -954,7 +954,7 @@ h3{
     -ms-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
-}
+}*/
 /*Bootstrap End*/
 
 @media (min-width: 992px){
@@ -963,7 +963,7 @@ h3{
   }
 }
 @media (min-width: 768px) {
-  .btns a {
+  .btns a{
     display: inline-block;
     max-width: inherit;
   }
