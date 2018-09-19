@@ -1,5 +1,6 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
@@ -55,6 +56,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      '@bootstrap': 'bootstrap/dist',
+      '@wow': 'wowjs'
     }
   },
   module: {
@@ -101,7 +104,11 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    ...HTMLPlugins
+    ...HTMLPlugins,
+    new webpack.ProvidePlugin({
+         jQuery: "jquery",
+         $: "jquery"
+    })
   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
