@@ -5,7 +5,7 @@ import store from '../../store';
 import $ from 'jquery';
 import '@bootstrap/js/bootstrap.min.js'
 import '@bootstrap/css/bootstrap.min.css'
-import '@wow/css/libs/animate.css'
+import '@/assets/css/animate.css'
 import '@/assets/css/ico.css'
 
 

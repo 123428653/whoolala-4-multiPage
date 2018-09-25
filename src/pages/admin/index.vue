@@ -10,8 +10,8 @@
           <b-navbar-nav>
             <b-nav-item href="javascript:;" @click="scrollTo(2)">FAQ</b-nav-item>
             <b-nav-item href="javascript:;" @click="scrollTo(1)">TEAM</b-nav-item>
-            <b-nav-item href="#">BOUNTY</b-nav-item>
-            <b-nav-item href="#">BLOG</b-nav-item>
+            <b-nav-item href="javascript:;">BOUNTY</b-nav-item>
+            <b-nav-item href="javascript:;">BLOG</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
@@ -983,7 +983,6 @@
 <script type="text/javascript">
   import { WOW } from 'wowjs';
   import scrollTo from '@/assets/js/scrollToTop';
-  import CountDown from '../../components/vue2-countdown'
   let faqList = [
     {
       title:'What does CIT stand for and what is it?',
@@ -1024,7 +1023,7 @@
   ]
   export default {
     components:{
-      CountDown
+      CountDown: () => import('../../components/vue2-countdown')
     },
     data(){
       return {
